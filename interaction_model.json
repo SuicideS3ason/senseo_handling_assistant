@@ -1,0 +1,206 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "senseobenutzerschnittstelle",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "abbruch"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "hilfe"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "aufhören",
+            "stop"
+          ]
+        },
+        {
+          "name": "overviewIntent",
+          "slots": [],
+          "samples": [
+            "gib mir eine übersicht",
+            "gib mir einen überblick",
+            "übersicht",
+            "überblick"
+          ]
+        },
+        {
+          "name": "decalcifyIntent",
+          "slots": [
+            {
+              "name": "article",
+              "type": "article"
+            },
+            {
+              "name": "identifier",
+              "type": "identifier"
+            }
+          ],
+          "samples": [
+            "wie geht entkalken",
+            "wie entkalke ich {article} {identifier}",
+            "wie entkalke ich",
+            "entkalken"
+          ]
+        },
+        {
+          "name": "productionIntent",
+          "slots": [
+            {
+              "name": "product",
+              "type": "product"
+            },
+            {
+              "name": "article",
+              "type": "article"
+            }
+          ],
+          "samples": [
+            "{product}",
+            "wie geht es {product} zu machen",
+            "wie kann ich {product} machen",
+            "wie mache ich {article} {product}",
+            "wie mache ich {product}",
+            "wie geht {product}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "ok",
+            "ja"
+          ]
+        },
+        {
+          "name": "smallCoffIntent",
+          "slots": [],
+          "samples": [
+            "ich möchte einen kleinen",
+            "einen kleinen",
+            "kleiner kaffee",
+            "klein"
+          ]
+        },
+        {
+          "name": "coffeeIntent",
+          "slots": [],
+          "samples": [
+            "ich möchte einen grossen kaffee",
+            "einen grossen kaffee",
+            "einen grossen",
+            "gross",
+            "grosser",
+            "ein normaler",
+            "einen normalen",
+            "normal"
+          ]
+        },
+        {
+          "name": "twoCupsIntent",
+          "slots": [],
+          "samples": [
+            "ich möchte zwei tassen kaffee",
+            "ich möchte zwei kaffee",
+            "zwei kaffee",
+            "zwei tassen"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "article",
+          "values": [
+            {
+              "name": {
+                "value": "mir"
+              }
+            },
+            {
+              "name": {
+                "value": "meinen"
+              }
+            },
+            {
+              "name": {
+                "value": "meine"
+              }
+            },
+            {
+              "name": {
+                "value": "den"
+              }
+            },
+            {
+              "name": {
+                "value": "das"
+              }
+            },
+            {
+              "name": {
+                "value": "die"
+              }
+            },
+            {
+              "name": {
+                "value": "der"
+              }
+            }
+          ]
+        },
+        {
+          "name": "identifier",
+          "values": [
+            {
+              "name": {
+                "value": "kaffeemaschine"
+              }
+            },
+            {
+              "name": {
+                "value": "senseo"
+              }
+            },
+            {
+              "name": {
+                "value": "maschine"
+              }
+            }
+          ]
+        },
+        {
+          "name": "product",
+          "values": [
+            {
+              "name": {
+                "value": "kakao"
+              }
+            },
+            {
+              "name": {
+                "value": "cappuccino"
+              }
+            },
+            {
+              "name": {
+                "value": "latte macchiatto"
+              }
+            },
+            {
+              "name": {
+                "value": "kaffee"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

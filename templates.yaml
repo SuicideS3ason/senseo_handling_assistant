@@ -1,6 +1,7 @@
 # triggered on launch
 greeting: 'Hallo und herzlich willkommen in der Senseo Assistenten umgebung. Um eine Übersicht über die Funktionen des Skills zu erhalten
-sagen Sie einfach: Alexa ask senseo benutzerschnittstelle Überblick. Möchten Sie sich direkt erklären lassen wie Sie sich ein Getränk machen?'
+sagen Sie einfach: Alexa ask senseo benutzerschnittstelle Überblick.
+Möchten Sie sich direkt erklären lassen wie Sie sich ein Getränk machen?'
 
 # overview
 overview: 'Die Funktionen dieses Skills enthalten erklärungen zur bedienung, zum beispiel wie man sich einen kaffee macht.
@@ -19,7 +20,8 @@ choose_product: 'Sie haben die Auswahl zwischen Kaffee, Cappucino, Latte Macchia
 dann sagen sie einfach Alexa ask senseo benutzerschnittstelle Getränk, wobei Getränk das Produkt ihrer Wahl ist.'
 
 # distinguishing between small and normal cup of coffee
-size_does_matter: 'Möchten Sie einen kleinen oder grossen kaffee? Manchmal spielt grösse sehr wohl eine Rolle. Oder möchten Sie zwei Tassen kaffee?'
+size_does_matter: 'Möchten Sie einen kleinen oder grossen kaffee? Manchmal spielt grösse sehr wohl eine Rolle.
+Oder möchten Sie zwei Tassen kaffee?'
 
 # Explanations
 explanation_small_cup: 'Zubereitung von {{product}}: Prüfen Sie zunächst den Füllstand des Wassertanks und achten Sie darauf,
