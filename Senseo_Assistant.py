@@ -1,19 +1,13 @@
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question
 
+# ====================================== FLASK DECLARATION AND INITIALIZATION ======================================== #
+
 APP = Flask(__name__)
 ASK = Ask(APP, '/')
 
 
-@ASK.launch
-def launch():
-    return question(render_template('greeting'))
-
-
-@ASK.intent('AMAZON.YesIntent')
-def choose_product():
-    return statement(render_template('choose_product'))
-
+# ===================================== IMPLEMENTATION FOR PREDEFINED INTENTS ======================================== #
 
 @ASK.intent('AMAZON.CancelIntent')
 def cancel():
@@ -30,28 +24,71 @@ def help():
     return overview()
 
 
+@ASK.intent('AMAZON.YesIntent')
+def choose_product():
+    """
+    user is asked which product he wants
+    :return:
+    """
+    return statement(render_template('choose_product'))
+
+
+# ==================================================================================================================== #
+# ======================================== MAIN AREA WITH OWN IMPLEMENTATION ========================================= #
+
+
+@ASK.launch
+def launch():
+    """
+    the function that is triggered when skill is started
+    :return: a greeting
+    """
+    return question(render_template('greeting'))
+
+
 @ASK.intent('overviewIntent')
 def overview():
+    """
+    user is presented a broad overview over the skills functionality
+    :return:
+    """
     return statement(render_template('overview'))
 
 
 @ASK.intent('smallCoffIntent')
 def small_coffee():
+    """
+    when the user decides to choose a small coffee
+    :return:
+    """
     return statement(render_template('explanation_small_cup'))
 
 
 @ASK.intent('coffeeIntent')
 def normal_coffee():
+    """
+    when the user decides to pick a normal or large cup of coffee
+    :return:
+    """
     return statement(render_template('explanation_large_cup', product='kaffee'))
+
 
 @ASK.intent('twoCupsIntent')
 def two_cups_of_coffee():
+    """
+    in case the user wants to have two cups of coffee
+    :return:
+    """
     return statement(render_template('explanation_two_cups', product='kaffee'))
 
 
-@ASK.intent('productionIntent', convert={'product' : str}, default={'product': None})
+@ASK.intent('productionIntent', convert={'product': str}, default={'product': None})
 def explain_product(product):
-    print(product)
+    """
+    the user wants to have an explanation on how he/she manages to make a hot drink using the senseo coffeepad machine
+    :param product: the product the user says he/she wants
+    :return: respective template for each situation depending the implementation
+    """
     if product == None:
         return statement(render_template('no_such_product'))
     elif product == 'kaffee':
@@ -62,6 +99,10 @@ def explain_product(product):
 
 @ASK.intent('decalcifyIntent')
 def decalcify():
+    """
+    short explanation on how one could decalcify the machine.
+    :return:
+    """
     return statement(render_template('decalcify'))
 
 
