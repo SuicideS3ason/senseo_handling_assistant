@@ -1,6 +1,6 @@
 # Senseo handling assistant
 
-Alexa skill written in python 3 with the flask/flask-ask framework.
+Alexa skill written in python 3 with the flask/flask-ask framework, using ngrok for the endpoints.
 
 __So far:__ _implemented with german dialogues, english following soon&trade;_
 
