@@ -1,0 +1,36 @@
+# triggered on launch
+greeting: 'Hallo und herzlich willkommen in der Senseo Assistenten umgebung. Um eine Übersicht über die Funktionen des Skills zu erhalten
+sagen Sie einfach: Alexa ask senseo benutzerschnittstelle Überblick. Möchten Sie sich direkt erklären lassen wie Sie sich ein Getränk machen?'
+
+# overview
+overview: 'Die Funktionen dieses Skills enthalten erklärungen zur bedienung, zum beispiel wie man sich einen kaffee macht.
+ Des weiteren umfasst der Skill auch Informationen zur Instandhaltung der Kaffeemaschine.'
+
+# (choose) product
+choose_product: 'Sie haben die Auswahl zwischen Kaffee, Cappucino, Latte Macchiatto und Kakao. Wenn Sie sich entschieden haben
+dann sagen sie einfach Alexa ask senseo benutzerschnittstelle Getränk, wobei Getränk das Produkt ihrer Wahl ist.'
+
+size_does_matter: 'Möchten Sie einen kleinen oder grossen kaffee?'
+
+explanation_one_cup: 'Zubereitung von {{product}}: Prüfen Sie zunächst den Füllstand des Wassertanks und achten Sie darauf,
+dass dieser bis zur mindest-markierung gefüllt ist. Drücken Sie dann auf den An und Ausschalter der Kaffeemaschine,
+ und legen Sie den Einsatz für ein Pad ein. Nachdem Sie das Gerät eingeschalten haben beginnt der Ring um den Knopf herum zu blinken;
+ sobald der ring durchgehend leuchtet ist das wasser für ihr getränk fertig aufgebrüht.
+ Drücken sie nun auf den knopf auf dem eine tasse abgebildet ist, so beginnt die maschine ihren kaffee frisch aufzugiessen.
+ Am ende, also sobald kein kaffee mehr läuft drücken sie noch einmal auf den An und Ausschalter um das gerät auszuschalten,
+ wenn sie dies nicht tun, brüht die maschine wieder wasser auf.'
+
+explanation_two_cups: 'Zubereitung {{product}}: Prüfen Sie zunächst den Füllstand des Wassertanks und achten Sie darauf,
+dass dieser bis zur mindest-markierung für zwei tassen gefüllt ist. Drücken Sie dann auf den An und Ausschalter der Kaffeemaschine,
+ und legen Sie den Einsatz für zwei Pads ein. Nachdem Sie das Gerät eingeschalten haben beginnt der Ring um den Knopf herum zu blinken;
+ sobald der ring durchgehend leuchtet ist das wasser für ihr getränk fertig aufgebrüht. Legen Sie in die vorhin eingelegte
+ Pad halterung das {{product}} pad ein und verschliessen den deckel indem sie den hebel nach unten führen.
+ Drücken sie nun auf den knopf auf dem zwei tassen abgebildet sind, so beginnt die maschine ihr getränk frisch aufzugiessen.
+ Am ende, also sobald nichts mehr heraus läuft drücken sie noch einmal auf den An und Ausschalter um das gerät auszuschalten,
+ wenn sie dies nicht tun, brüht die maschine nochmals wasser auf.'
+
+# errors
+no_such_product: 'Das gewünschte Produkt existiert nicht oder ist nicht im Skill enthalten.'
+
+# todo:
+decalcify: 'entkalken'
