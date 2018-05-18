@@ -41,7 +41,7 @@ def choose_product():
 def launch():
     """
     the function that is triggered when skill is started
-    :return: a greeting
+    :return: a greeting template
     """
     return question(render_template('greeting'))
 
@@ -50,7 +50,7 @@ def launch():
 def overview():
     """
     user is presented a broad overview over the skills functionality
-    :return:
+    :return: template with overview content
     """
     return statement(render_template('overview'))
 
@@ -59,7 +59,7 @@ def overview():
 def small_coffee():
     """
     when the user decides to choose a small coffee
-    :return:
+    :return: template that explains how to make small coffee
     """
     return statement(render_template('explanation_small_cup'))
 
@@ -68,7 +68,7 @@ def small_coffee():
 def normal_coffee():
     """
     when the user decides to pick a normal or large cup of coffee
-    :return:
+    :return: template that explains how to make normal coffee
     """
     return statement(render_template('explanation_large_cup', product='kaffee'))
 
@@ -77,7 +77,7 @@ def normal_coffee():
 def two_cups_of_coffee():
     """
     in case the user wants to have two cups of coffee
-    :return:
+    :return: template that explains how to make two single cups of coffee parallel.
     """
     return statement(render_template('explanation_two_cups', product='kaffee'))
 
@@ -87,7 +87,7 @@ def explain_product(product):
     """
     the user wants to have an explanation on how he/she manages to make a hot drink using the senseo coffeepad machine
     :param product: the product the user says he/she wants
-    :return: respective template for each situation depending the implementation
+    :return: respective template for each situation depending on the implementation
     """
     if product == None:
         return statement(render_template('no_such_product'))
@@ -101,7 +101,7 @@ def explain_product(product):
 def decalcify():
     """
     short explanation on how one could decalcify the machine.
-    :return:
+    :return: the template that explains how to decalcify
     """
     return statement(render_template('decalcify'))
 
