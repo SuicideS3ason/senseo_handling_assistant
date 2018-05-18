@@ -15,6 +15,21 @@ def choose_product():
     return statement(render_template('choose_product'))
 
 
+@ASK.intent('AMAZON.CancelIntent')
+def cancel():
+    return statement(render_template('cancel'))
+
+
+@ASK.intent('AMAZON.StopIntent')
+def stop():
+    return cancel()
+
+
+@ASK.intent('AMAZON.HelpIntent')
+def help():
+    return overview()
+
+
 @ASK.intent('overviewIntent')
 def overview():
     return statement(render_template('overview'))
@@ -22,11 +37,15 @@ def overview():
 
 @ASK.intent('smallCoffIntent')
 def small_coffee():
-    return statement(render_template('explanation_one_cup'))
+    return statement(render_template('explanation_small_cup'))
 
 
 @ASK.intent('coffeeIntent')
 def normal_coffee():
+    return statement(render_template('explanation_large_cup', product='kaffee'))
+
+@ASK.intent('twoCupsIntent')
+def two_cups_of_coffee():
     return statement(render_template('explanation_two_cups', product='kaffee'))
 
 
