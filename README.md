@@ -1,4 +1,6 @@
-# Senseo handling assistang
+# Senseo handling assistant
+====
+
 Alexa skill written in python with flask framework.
 
 __So far:__ _implemented with german dialogues, english following soon&trade;_
