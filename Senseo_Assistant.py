@@ -94,7 +94,7 @@ def explain_product(product):
     elif product == 'kaffee':
         return question(render_template('size_does_matter'))
 
-    return statement(render_template('explanation_two_cups', product=product))
+    return statement(render_template('explanation_large_cup', product=product))
 
 
 @ASK.intent('decalcifyIntent')
